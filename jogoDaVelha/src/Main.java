@@ -1,16 +1,45 @@
 import Classes.Jogador;
 import Enumeracao.NumeroDoJogador;
 
-public class Main {
-    public static void main(String[] args) {
-        char[] ai = new char[5];
+import java.util.Scanner;
 
-        for (int i = 0; i<ai.length; i++){
-            if (ai[i] == Character.MIN_VALUE){
-                System.out.println("ok");
+public class Main {
+
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        while (true) {
+
+            System.out.println("Bem vindo ao Jogo Da Velha");
+            System.out.println("1 ---> Jogar");
+            System.out.println("2 ---> Sair");
+
+            System.out.print("Selecione: ");
+            int opcao = sc.nextInt();
+            System.out.println();
+
+            if (opcao == 1) {
+
+                String nomePlayer1;
+                String nomePlayer2;
+
+                nomePlayer1 = sc.nextLine();
+
+
+            } else {
+                if (opcao == 2) {
+                    System.out.println("Obrigado por Jogar!");
+                    break;
+                } else {
+                    System.out.println("OPCAO INVALIDA!");
+                }
             }
+
+
         }
 
 
     }
+
 }
