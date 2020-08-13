@@ -1,7 +1,5 @@
 package Classes;
 
-import java.util.Arrays;
-
 public class JogoDaVelha {
     private int tamanhoTabuleiro;
     private char[][] tabuleiro;
@@ -10,21 +8,44 @@ public class JogoDaVelha {
         tabuleiro = new char[3][3];
     }
 
-    public JogoDaVelha(int tamanhoTabuleiro) {
-        tabuleiro = new char[tamanhoTabuleiro][tamanhoTabuleiro];
-    }
-
     public boolean realizaJogada(int linha, int coluna, Jogador jogador) {
         if (tabuleiro[linha][coluna] == Character.MIN_VALUE) {
             if (jogador.getNumeroDoJogador().getCharJogador() == 'X') {
-                tabuleiro[linha][coluna] = 'X';
+                tabuleiro[linha][coluna] = jogador.getNumeroDoJogador().getCharJogador();
             } else {
-                tabuleiro[linha][coluna] = 'O';
+                tabuleiro[linha][coluna] = jogador.getNumeroDoJogador().getCharJogador();
             }
             return true;
 
         }
         return false;
+    }
+
+    public boolean validaJogada(int linha, int coluna) {
+        if (tabuleiro[linha][coluna] == Character.MIN_VALUE) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verificaJogadaDentro(int linha, int coluna){
+        if ((linha >= tabuleiro.length) || (coluna >= tabuleiro[0].length)){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean verificaEndGame() {
+
+        for (int i = 0; i < tabuleiro.length; i++) {
+            for (int j = 0; j < tabuleiro[0].length; j++) {
+                if (tabuleiro[i][j] == Character.MIN_VALUE) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     public boolean verificaGanhador() {
@@ -110,5 +131,17 @@ public class JogoDaVelha {
         }
 
         return estadoTabuleiro;
+    }
+
+    public void setTamanhoTabuleiro(int tamanhoTabuleiro) {
+        tabuleiro = new char[tamanhoTabuleiro][tamanhoTabuleiro];
+    }
+
+    public void clenTabuleiro(){
+        for (int i = 0; i < tabuleiro.length; i++){
+            for (int j = 0; j < tabuleiro[0].length; j++){
+                tabuleiro[i][j] = Character.MIN_VALUE;
+            }
+        }
     }
 }

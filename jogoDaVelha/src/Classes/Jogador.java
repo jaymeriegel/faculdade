@@ -19,6 +19,10 @@ public class Jogador {
         contagemDeJogadores ++;
     }
 
+    public void somaPonto(){
+        quantidadeDePontos ++;
+    }
+
     public NumeroDoJogador getNumeroDoJogador() {
         return numeroDoJogador;
     }
