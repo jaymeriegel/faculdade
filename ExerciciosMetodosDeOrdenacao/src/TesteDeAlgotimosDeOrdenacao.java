@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class TesteDeAlgotimosDeOrdenacao {
 
     public static void bubbleSort(int[] arrayInt) {
@@ -67,13 +69,61 @@ public class TesteDeAlgotimosDeOrdenacao {
 
     public static void main(String[] args) {
 
-        int[] array = new int[]{-1, -3, 0, 101, 2, 7, 4, 9, 3, 1, 10, 1, 100, 15};
+        // -------> Exercicio 1
 
-        selectSort(array);
+//        int[] array = new int[]{2, 7, 4, 9, 3};
+//
+//        System.out.println("--- Bubble Sort");
+//        bubbleSort(array);
+//        for (int i : array) {
+//            System.out.println(i);
+//        }
+//        System.out.println();
+//
+//        System.out.println("--- Insertion Sort");
+//        insertionSort(array);
+//        for (int i : array) {
+//            System.out.println(i);
+//        }
+//        System.out.println();
+//
+//        System.out.println("--- Selection Sort");
+//        selectSort(array);
+//        for (int i : array) {
+//            System.out.println(i);
+//        }
+//        System.out.println();
 
-        for (int i : array) {
-            System.out.println(i);
+
+        // -------> Exercicio 2
+        // O Array em questão foi ordenado pelo Selection Sort.
+
+        // -------> Exercicio 3
+
+        int[] arrayOrdemCrescente = new int[200000];
+        int[] arrayOrdemDecrescente = new int[200000];
+        int[] arrayOrdemAleatoria = new int[200000];
+
+        for (int i = 0; i < arrayOrdemCrescente.length; i++) {
+            arrayOrdemCrescente[i] = i;
         }
+
+        for (int i = 0; i < arrayOrdemDecrescente.length; i++) {
+            arrayOrdemDecrescente[i] = arrayOrdemDecrescente.length - i;
+        }
+
+        Random sorteio = new Random();
+        for (int i = 0; i < arrayOrdemAleatoria.length; i++) {
+            arrayOrdemAleatoria[i] = sorteio.nextInt(10000);
+        }
+
+        long tempoInicial = System.currentTimeMillis();
+
+        selectSort(arrayOrdemDecrescente);
+
+        long tempoFinal = System.currentTimeMillis();
+
+        System.out.println((tempoFinal - tempoInicial) / 1000);
 
 
     }
