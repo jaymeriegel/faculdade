@@ -100,9 +100,9 @@ public class TesteDeAlgotimosDeOrdenacao {
 
         // -------> Exercicio 3
 
-        int[] arrayOrdemCrescente = new int[200000];
-        int[] arrayOrdemDecrescente = new int[200000];
-        int[] arrayOrdemAleatoria = new int[200000];
+        int[] arrayOrdemCrescente = new int[100000];
+        int[] arrayOrdemDecrescente = new int[100000];
+        int[] arrayOrdemAleatoria = new int[100000];
 
         for (int i = 0; i < arrayOrdemCrescente.length; i++) {
             arrayOrdemCrescente[i] = i;
@@ -119,7 +119,7 @@ public class TesteDeAlgotimosDeOrdenacao {
 
         long tempoInicial = System.currentTimeMillis();
 
-        selectSort(arrayOrdemDecrescente);
+        selectSort(arrayOrdemAleatoria);
 
         long tempoFinal = System.currentTimeMillis();
 
