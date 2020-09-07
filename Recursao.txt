@@ -1,0 +1,19 @@
+m+m(n-1) -> utilizado para destacar a primeira rodada do resto;
+
+Estrutura recursiva:
+
+if -> utilizado para parar
+else -> continua o método
+
+*precisa ter um critério de parada, ou seja, um return que não seja o método 
+*normalmente de forma decrescente
+*a lógica por trás é a indução matemática
+*funcionam como uma estrutura de dados do tipo pilha (last in, first out) 
+
+Parâmetro formal = chamada do método;
+Parâmetro real = chamada dentro do método, sempre com o mesmo tipo do parâmetro formal;
+
+Passos para definir a recursão:
+1 - definir pelo menos 1 caso básico;
+2 - quebrar o problema em subproblemas, definindo o(s) caso(s) recursivos(s);
+3 - Fazer teste de finitude;
