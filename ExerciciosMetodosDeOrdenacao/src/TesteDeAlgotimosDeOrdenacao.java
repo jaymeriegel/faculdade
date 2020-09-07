@@ -71,34 +71,33 @@ public class TesteDeAlgotimosDeOrdenacao {
 
         // -------> Exercicio 1
 
-//        int[] array = new int[]{2, 7, 4, 9, 3};
-//
-//        System.out.println("--- Bubble Sort");
-//        bubbleSort(array);
-//        for (int i : array) {
-//            System.out.println(i);
-//        }
-//        System.out.println();
-//
-//        System.out.println("--- Insertion Sort");
-//        insertionSort(array);
-//        for (int i : array) {
-//            System.out.println(i);
-//        }
-//        System.out.println();
-//
-//        System.out.println("--- Selection Sort");
-//        selectSort(array);
-//        for (int i : array) {
-//            System.out.println(i);
-//        }
-//        System.out.println();
+        int[] array = new int[]{2, 7, 4, 9, 3};
 
+        System.out.println("--- Bubble Sort");
+        bubbleSort(array);
+        for (int i : array) {
+            System.out.println(i);
+        }
+        System.out.println();
 
-        // -------> Exercicio 2
-        // O Array em questão foi ordenado pelo Selection Sort.
+        System.out.println("--- Insertion Sort");
+        insertionSort(array);
+        for (int i : array) {
+            System.out.println(i);
+        }
+        System.out.println();
+
+        System.out.println("--- Selection Sort");
+        selectSort(array);
+        for (int i : array) {
+            System.out.println(i);
+        }
+        System.out.println();
+
 
         // -------> Exercicio 3
+        // O Array em questão foi ordenado pelo Selection Sort.
+        
 
         int[] arrayOrdemCrescente = new int[100000];
         int[] arrayOrdemDecrescente = new int[100000];
